@@ -1,0 +1,32 @@
+For deploying a Java Application on AWS, 2 options are available :
+
+1. EC2 instance
+2. Elastic Beanstalk
+
+The preferred choice for this kind of deployment is Elastic Beanstalk
+
+Following are the reasons :
+-> It has multiple platform configurations for required application (Java, Apacahe, DB etc)
+-> Its a layer of abstraction on top of EC2, hence it can provide following AWS components in single env:
+Elastic Load Balancer, Auto-Scaling Group, Security Group etc
+
+
+We can use AWS SDK for Java. AWS Toolkit for Eclipse to directly push the application to AWS cloud
+
+First sign up for AWS account and then create a Elastic Beanstalk application :
+
+And follow steps as below :
+1. Open console for Elastic Beanstalk and Choose the platform and launch
+2. Launch an env with following resources :
+EC2 instance – 
+Instance security group
+Load balancer 
+Load balancer security group 
+Auto Scaling group 
+Amazon S3 bucket 
+Amazon CloudWatch alarms
+AWS CloudFormation stack 
+Domain name 
+
+3. After this, verify your environment, upload code and deploy your application
+4. Change configurations if needed
